@@ -68,8 +68,8 @@ public class Communicator : MonoBehaviour
         animateWaveform = false;
 
         // TODO: 2.a Delete the following two lines:
-        RecordButton.SetActive(false);
-        MessageUIRenderer.gameObject.SetActive(false);
+        //RecordButton.SetActive(false);
+        //MessageUIRenderer.gameObject.SetActive(false);
     }
 
     void Update()
