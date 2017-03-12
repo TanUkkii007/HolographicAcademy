@@ -27,22 +27,22 @@ namespace Academy.HoloToolkit.Unity
             /* TODO: DEVELOPER CODING EXERCISE 2.b */
 
             // 2.b: Instantiate the NavigationRecognizer.
-
+            NavigationRecognizer = new GestureRecognizer();
 
             // 2.b: Add Tap and NavigationX GestureSettings to the NavigationRecognizer's RecognizableGestures.
-
+            NavigationRecognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.NavigationX);
 
 
             // 2.b: Register for the TappedEvent with the NavigationRecognizer_TappedEvent function.
-
+            NavigationRecognizer.TappedEvent += NavigationRecognizer_TappedEvent;
             // 2.b: Register for the NavigationStartedEvent with the NavigationRecognizer_NavigationStartedEvent function.
-
+            NavigationRecognizer.NavigationStartedEvent += NavigationRecognizer_NavigationStartedEvent;
             // 2.b: Register for the NavigationUpdatedEvent with the NavigationRecognizer_NavigationUpdatedEvent function.
-
+            NavigationRecognizer.NavigationUpdatedEvent += NavigationRecognizer_NavigationUpdatedEvent;
             // 2.b: Register for the NavigationCompletedEvent with the NavigationRecognizer_NavigationCompletedEvent function. 
-
+            NavigationRecognizer.NavigationCompletedEvent += NavigationRecognizer_NavigationCompletedEvent;
             // 2.b: Register for the NavigationCanceledEvent with the NavigationRecognizer_NavigationCanceledEvent function. 
-
+            NavigationRecognizer.NavigationCompletedEvent += NavigationRecognizer_NavigationCompletedEvent;
 
             // Instantiate the ManipulationRecognizer.
             ManipulationRecognizer = new GestureRecognizer();
@@ -110,31 +110,31 @@ namespace Academy.HoloToolkit.Unity
         private void NavigationRecognizer_NavigationStartedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
         {
             // 2.b: Set IsNavigating to be true.
-
+            IsNavigating = true;
 
             // 2.b: Set NavigationPosition to be relativePosition.
-
+            NavigationPosition = relativePosition;
         }
 
         private void NavigationRecognizer_NavigationUpdatedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
         {
             // 2.b: Set IsNavigating to be true.
-
+            IsNavigating = true;
 
             // 2.b: Set NavigationPosition to be relativePosition.
-
+            NavigationPosition = relativePosition;
         }
 
         private void NavigationRecognizer_NavigationCompletedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
         {
             // 2.b: Set IsNavigating to be false.
-
+            IsNavigating = false;
         }
 
         private void NavigationRecognizer_NavigationCanceledEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
         {
             // 2.b: Set IsNavigating to be false.
-
+            IsNavigating = false;
         }
 
         private void ManipulationRecognizer_ManipulationStartedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
