@@ -476,6 +476,16 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0.48707384
       objectReference: {fileID: 0}
+    - target: {fileID: 82846982791360234, guid: 8b208d375c6fda543b309f99efaf76aa,
+        type: 2}
+      propertyPath: Spatialize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82846982791360234, guid: 8b208d375c6fda543b309f99efaf76aa,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b208d375c6fda543b309f99efaf76aa, type: 2}
   m_IsPrefabParent: 0
