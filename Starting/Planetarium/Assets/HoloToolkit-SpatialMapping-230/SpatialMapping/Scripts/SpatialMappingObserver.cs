@@ -103,6 +103,7 @@ namespace Academy.HoloToolkit.Unity
             base.Awake();
 
             ObserverState = ObserverStates.Stopped;
+            //TrianglesPerCubicMeter = 1200;
         }
 
         /// <summary>
